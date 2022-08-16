@@ -9,9 +9,6 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-alias tnsadmin='cd $ORACLE_HOME/network/admin'
-alias oh='cd $ORACLE_HOME'
-alias ohdbs='cd $ORACLE_HOME/dbs'
 
 # RLWRAP Aliases
 alias rlrman='rlwrap -i -D 2 -s 1000 rman'
