@@ -39,6 +39,6 @@ ${ORACLE_HOME}/bin/rman target / msglog=/tmp/RunDeleteArchive_${dbSID}_${dt}.log
 run
 {
     delete noprompt archivelog all completed before 'sysdate - ${archlogHours}/24';
-#    crosscheck archivelog all;
+    crosscheck archivelog all;
 }
 EOF
