@@ -1,0 +1,27 @@
+# User specific aliases and functions
+alias tnsadmin='cd $ORACLE_HOME/network/admin'
+alias oh='cd $ORACLE_HOME'
+alias ohdbs='cd $ORACLE_HOME/dbs'
+
+# RLWRAP Aliases
+alias rlrman='rlwrap -i -D 2 -s 1000 rman'
+alias rldgb='rlwrap -i -D 2 -s 500 dgmgrl'
+alias rlggsci='rlwrap -D 2 ggsci'
+alias sysdba='rlwrap -i -D 1 -s 5000 sqlplus "/as sysdba"'
+alias sysasm='rlwrap -i -D 1 -s 5000 sqlplus "/as sysasm"'
+alias rlsp='rlwrap -i -D 1 -s 5000 sqlplus'
+alias rlasm='rlwrap -i -D 1 -s 1000 asmcmd'
+
+# NEC Toolset Aliases
+export ORACLE_BASE=/u01/app/oracle
+alias toolset='cd $ORACLE_BASE/toolset'
+alias toollog='cd $ORACLE_BASE/toolset/var/log; ls -l'
+alias tooletc='cd $ORACLE_BASE/toolset/etc; ls -l'
+
+# Oracle RAC Grid Infrastructure status aliases
+alias crslsnr='crsctl status res -t -w "(TYPE = ora.listener.type)"'
+alias crsoffline='crsctl stat res -t -w "(TARGET != STATE)"'
+alias crsdb='crsctl stat res -t -w "(TYPE = ora.database.type)"'
+alias crsscan='crsctl stat res -t -w "(TYPE = ora.scan_listener.type)"'
+alias crsacfs='crsctl stat res -t -w "(TYPE = ora.acfs.type)"'
+alias crsvip='crsctl stat res -t -w "(TYPE = ora.cluster_vip_net1.type)"'

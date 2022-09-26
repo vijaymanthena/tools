@@ -1,0 +1,12 @@
+#!/bin/bash
+##################################################################
+#                                                                #
+# Author: Vijay Manthena                                         #
+# Description: Functions that I most frequently use              #
+#                                                                #
+##################################################################
+
+# Function to grep a substring in history
+h()
+  { history | grep ${*} ; }
+
