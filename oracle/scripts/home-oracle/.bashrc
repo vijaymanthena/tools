@@ -9,12 +9,10 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+export ORACLE_PATH=/u01/app/oracle/local/sql
 
-# RLWRAP Aliases
-alias rlrman='rlwrap -i -D 2 -s 1000 rman'
-alias rldgb='rlwrap -i -D 2 -s 500 dgmgrl'
-alias rlggsci='rlwrap -D 2 ggsci'
-alias sysdba='rlwrap -i -D 1 -s 5000 sqlplus "/as sysdba"'
-alias sysasm='rlwrap -i -D 1 -s 5000 sqlplus "/as sysasm"'
-alias rlsp='rlwrap -i -D 1 -s 5000 sqlplus'
-alias rlasm='rlwrap -i -D 1 -s 1000 asmcmd'
+
+if [ -f /opt/oracle/scripts/bash/bash_aliases ]; then
+  . /opt/oracle/scripts/bash/bash_aliases
+fi
+
